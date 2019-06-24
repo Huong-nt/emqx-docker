@@ -19,7 +19,7 @@ RUN apk add git \
 ARG EMQX_DEPS_DEFAULT_VSN=develop
 ARG DEPLOY=cloud
 
-RUN git clone -b ${EMQX_DEPS_DEFAULT_VSN} https://github.com/emqx/emqx-rel.git /emqx_rel \
+RUN git clone -b ${EMQX_DEPS_DEFAULT_VSN} https://github.com/Huong-nt/emqx-rel.git /emqx_rel \
     && cd /emqx_rel \
     && make distclean \
     && git checkout relx \
@@ -35,8 +35,8 @@ LABEL org.label-schema.docker.dockerfile="Dockerfile" \
     org.label-schema.description="EMQ (Erlang MQTT Broker) is a distributed, massively scalable, highly extensible MQTT messaging broker written in Erlang/OTP." \
     org.label-schema.url="http://emqx.io" \
     org.label-schema.vcs-type="Git" \
-    org.label-schema.vcs-url="https://github.com/emqx/emqx-docker" \
-    maintainer="Raymond M Mouthaan <raymondmmouthaan@gmail.com>, Huang Rui <vowstar@gmail.com>, EMQ X Team <support@emqx.io>"
+    org.label-schema.vcs-url="https://github.com/Huong-nt/emqx-docker" \
+    maintainer="Huong NT <huongnt141@fpt.com.vn>"
 
 ARG QEMU_ARCH=x86_64
 COPY docker-entrypoint.sh start.sh tmp/qemu-$QEMU_ARCH-stati* /usr/bin/
