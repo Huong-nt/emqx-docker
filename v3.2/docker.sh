@@ -11,7 +11,7 @@ ARCH="${ARCH:-amd64}"
 QEMU_VERSION="${QEMU_VERSION:-v4.0.0}"
 
 # versioning
-EMQX_VERSION="${EMQX_VERSION:-${TAG_VSN:-develop}}"
+EMQX_VERSION="${EMQX_VERSION:-${TAG_VSN:-release-3.2}}"
 BUILD_VERSION="${BUILD_VERSION:-${EMQX_VERSION}}"
 
 main() {
